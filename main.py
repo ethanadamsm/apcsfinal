@@ -52,8 +52,7 @@ while(True):
 	if frames >= 300:
 		#while True:
 		s.send(str(player.getX()) + ", " + str(player.getY()) + ", " + str(socket.gethostbyname(socket.gethostname())))
-		s.send('-')
-		data = s.recv(8)
+		data = s.recv(2048)
 		mylist = data.replace(' ', '').split(',')
 		if len(mylist) > 2:
 			print mylist[0] + " " + mylist[1] + " " + mylist[2]
