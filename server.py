@@ -14,7 +14,7 @@ def listener(client, address):
         clients.add(client)
     try:
         while True:
-            data = client.recv(1024)
+            data = client.recv(2)
             dataset.append(data)
             if not data:
                 break
